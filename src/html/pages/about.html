@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>About Project</title>
+		<meta name="description" content="About page." />
+		<link rel="stylesheet" href="../../css/main.css" />
+
+		<link rel="icon" type="image/svg+xml" href="../../img/favicons/favicon.svg" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="../../img/favicons/apple-touch-icon.png"
+		/>
+	</head>
+
+	<body>
+		@@include('../blocks/header.html')
+		<main>
+			<section>
+				<div class="container">
+					<h1 class="title-1">About Us</h1>
+					<p>This is a nested page.</p>
+					<!-- This image should be resolved to ../img/favicons/favicon.svg -->
+					<img src="../../img/favicons/favicon.svg" alt="Test Image" />
+				</div>
+			</section>
+		</main>
+		@@include('../blocks/footer.html')
+		<script src="../../js/index.bundle.js"></script>
+	</body>
+</html>

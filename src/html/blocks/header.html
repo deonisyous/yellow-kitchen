@@ -1,0 +1,28 @@
+<!-- Header Section -->
+<header class="header">
+	<div class="container">
+		<div class="header__row">
+			<!-- Logo -->
+			<a class="logo" href="./index.html" aria-label="Yellow Kitchen Home">
+				<span class="logo__highlight">yellow</span>kitchen
+			</a>
+
+			<!-- Actions (Auth + Cart + Burger) -->
+			<div class="header__actions actions">
+				<a href="./login.html" class="actions__login"> <svg class="icon--user">
+						<use href="./img/svgsprite/sprite.symbol.svg#user"></use>
+					</svg>Log in</a>
+
+				<a href="./cart.html" class="actions__cart" aria-label="Shopping cart, 0 items">
+					<span class="actions__cart-count" aria-hidden="true">0</span>
+				</a>
+			</div>
+			<button class="mobile-nav-btn" type="button" aria-label="Open navigation menu" aria-expanded="false"
+				aria-controls="main-nav">
+				<span class="nav-icon" aria-hidden="true"></span>
+			</button>
+		</div>
+	</div>
+</header>
+
+@@include('mobile-nav.html')

@@ -1,0 +1,20 @@
+/* Base */
+@use './base/reset';
+@use './base/vars';
+@use './base/fontsAutoGen';
+@use './base/base';
+@use './base/utils';
+@use './base/containers';
+@use './base/sticky-footer';
+
+/* Blocks */
+@use './blocks/footer';
+@use './blocks/header';
+@use './blocks/icons';
+@use './blocks/mobile-nav';
+@use './blocks/nav-icon';
+@use './blocks/nav';
+
+/* No styles code below. Only in modules */
+
+/* Не пишите CSS код ниже. Только в подключаемых файлах */

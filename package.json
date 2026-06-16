@@ -1,0 +1,81 @@
+{
+	"name": "gulp-starter",
+	"version": "1.0.0",
+	"private": true,
+	"type": "module",
+	"engines": {
+		"node": ">=20.19.0"
+	},
+	"scripts": {
+		"dev": "gulp dev",
+		"start": "gulp dev",
+		"build": "gulp build",
+		"preview": "gulp preview",
+		"clean": "gulp clean",
+		"fonts": "gulp fonts",
+		"fonts:dev": "gulp fontsDev",
+		"fonts:docs": "gulp fontsDocs",
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"lint:styles": "stylelint \"src/scss/**/*.scss\"",
+		"lint:js": "eslint \"src/js/**/*.js\"",
+		"lint:html": "html-validate \"docs/**/*.html\"",
+		"check": "npm run format:check && npm run lint:styles && npm run lint:js && npm run build && npm run lint:html && npm audit",
+		"verify": "npm run check && gulp build:dev",
+		"prepare": "husky"
+	},
+	"lint-staged": {
+		"*.{js,css,md,html,json}": "prettier --write",
+		"*.scss": "stylelint --fix",
+		"src/js/**/*.js": "eslint --fix"
+	},
+	"browserslist": {
+		"production": [
+			">0.5%",
+			"last 2 versions",
+			"Firefox ESR",
+			"not dead"
+		],
+		"development": [
+			"last 2 Chrome versions",
+			"last 2 Firefox versions",
+			"last 2 Safari versions"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.29.0",
+		"@babel/preset-env": "^7.29.2",
+		"@eslint/js": "^10.0.1",
+		"babel-loader": "^10.1.1",
+		"browser-sync": "^3.0.4",
+		"eslint": "^10.2.1",
+		"eslint-config-prettier": "^10.1.8",
+		"fast-glob": "^3.3.3",
+		"globals": "^17.5.0",
+		"gulp": "^5.0.1",
+		"gulp-autoprefixer": "^10.0.0",
+		"gulp-changed": "^5.0.4",
+		"gulp-csso": "^4.0.1",
+		"gulp-file-include": "^2.3.0",
+		"gulp-htmlclean": "^2.7.22",
+		"gulp-notify": "^5.0.0",
+		"gulp-plumber": "^1.2.1",
+		"gulp-replace": "^1.1.4",
+		"gulp-sass": "^6.0.1",
+		"gulp-typograf": "^4.1.0",
+		"gulp-webp-retina-html": "^1.2.0",
+		"html-validate": "^10.13.1",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.4.0",
+		"prettier": "^3.8.3",
+		"sass": "^1.99.0",
+		"sharp": "^0.34.5",
+		"stylelint": "^17.8.0",
+		"stylelint-config-standard-scss": "^17.0.0",
+		"svgo": "^4.0.1",
+		"through2": "^4.0.2",
+		"wawoff2": "^2.0.1",
+		"webpack": "^5.106.2",
+		"webpack-stream": "^7.0.0"
+	}
+}

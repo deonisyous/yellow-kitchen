@@ -1,0 +1,18 @@
+.nav {
+	font-size: 18px;
+}
+
+.nav__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px 30px;
+}
+
+.nav__link {
+	color: var(--text-color);
+}
+
+.nav__link.active {
+	color: var(--accent);
+}

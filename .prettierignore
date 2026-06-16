@@ -1,0 +1,10 @@
+node_modules/
+build/
+docs/
+tmp-*/
+
+package-lock.json
+
+src/fonts/
+src/img/
+
