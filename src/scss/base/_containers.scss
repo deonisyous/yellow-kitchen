@@ -9,6 +9,13 @@
 	width: 100%;
 }
 
+.container-layout {
+	margin: 0 auto;
+
+	max-width: var(--container-width-layout);
+	width: 100%;
+}
+
 .container-full {
 	padding: 0 var(--container-padding);
 	max-width: 100%;

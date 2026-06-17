@@ -1,14 +1,14 @@
 @use '../base/mixins' as *;
 
 .header {
-	padding: 24px 0;
+	padding: 12px 0;
 	background-color: var(--page-bg);
-	border-bottom: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--gray-light);
 
 	&__row {
 		display: flex;
 		align-items: center;
-		column-gap: 24px;
+		column-gap: 48px;
 	}
 
 	&__actions {
@@ -16,13 +16,24 @@
 		align-items: center;
 		column-gap: 24px;
 		margin-left: auto;
+		font-family: var(--font-family);
 	}
 }
 
 .actions__login {
-display: flex;
-align-items: center;
-column-gap: 6px;
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+	color: var(--gray-second-text);
+	font-weight: 700;
+}
+
+.actions__cart span {
+	display: flex;
+	align-items: center;
+	column-gap: 6px;
+	color: var(--gray-second-text);
+	font-weight: 700;
 }
 
 .logo {
@@ -31,8 +42,10 @@ column-gap: 6px;
 	font-weight: 700;
 	color: var(--text-color);
 	z-index: 1;
+
 	span {
 		position: relative;
+
 		&::before {
 			content: '';
 			position: absolute;

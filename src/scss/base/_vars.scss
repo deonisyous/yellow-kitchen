@@ -1,4 +1,5 @@
-$container-width: 1200px;
+$container-width: 1310px;
+$container-width-layout: 1440px;
 $container-padding: 15px;
 $breakpoint-laptop: 1439px;
 $breakpoint-tablet: 1320px;
@@ -7,6 +8,7 @@ $breakpoint-mobile: 820px;
 :root {
 	--container-width: #{$container-width};
 	--container-padding: #{$container-padding};
+	--container-width-layout: #{$container-width-layout};
 	--font-family: 'Martel Sans', sans-serif;
 	--second-family: 'Poppins', sans-serif;
 	--third-family: 'Open Sans Condensed', sans-serif;
@@ -19,6 +21,15 @@ $breakpoint-mobile: 820px;
 	--laptop-size: #{$breakpoint-laptop};
 	--tablet-size: #{$breakpoint-tablet};
 	--mobile-size: #{$breakpoint-mobile};
+
+	--text-dark: #313030;
+	--gray-dark: #3f4255;
+	--gray-second-text: #9093a6;
+	--gray-light: #d4d7e5;
+	--gray-bg: #f2f4fa;
+	--brand-yellow-bright: #ffe145;
+	--brand-yellow-dark: #b79c10;
+	--brand-yellow-light: #fff7cc;
 }
 
 .dark {

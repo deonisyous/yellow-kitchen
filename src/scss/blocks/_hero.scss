@@ -1,0 +1,162 @@
+.hero {
+
+  // .hero__row
+
+  &__row {}
+
+  // .hero__content
+
+  &__content {}
+
+  // .hero__title
+
+  &__title {
+    padding-top: 120px;
+    max-width: 534px;
+    font-weight: 300;
+    font-family: var(--second-family);
+    font-size: 58px;
+    color: var(--gray-dark);
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    margin-bottom: 88px;
+  }
+
+  // .hero__cta
+
+  &__cta {}
+
+  // .hero__features
+
+  &__features {
+    display: flex;
+    width: 872px;
+    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+    padding: 24px 24px 24px 92px;
+    justify-content: space-between;
+
+  }
+
+  // .hero__image-block
+
+  &__image-block {}
+
+  // .hero__img
+
+  &__img {}
+
+  // .hero__caption
+
+  &__caption {}
+}
+
+.container {}
+
+.title-1 {}
+
+.cta-group {
+  display: flex;
+  column-gap: 24px;
+}
+
+.cta-card {
+  width: 118px;
+  height: 72px;
+  border: 2px solid var(--brand-yellow-bright);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 4px;
+  color: var(--gray-dark);
+  // .cta-card__badge
+
+  &__badge {}
+
+  // .cta-card__badge--delivery
+
+  &__badge--delivery {}
+
+  // .cta-card__text
+
+  &__text {
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  // .cta-card__title
+
+  &__title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+  }
+
+  // .cta-card__subtitle
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    font-family: var(--font-family);
+    letter-spacing: 0.03em;
+  }
+
+  // .cta-card__badge--takeout
+
+  &__badge--takeout {}
+}
+
+.icon {}
+
+.icon--delivery {}
+
+.icon--takeout {}
+
+.container-layout {}
+
+.features-list {
+  // .features-list__item
+
+  &__item {
+    position: relative;
+    padding-left: 64px;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      left: 0;
+    }
+
+
+    &:nth-child(1)::before {
+      background-image: url(../../img/hero/time-eat.svg);
+    }
+
+    &:nth-child(2)::before {
+      background-image: url(../../img/hero/delivery.svg);
+    }
+
+    &:nth-child(3)::before {
+      background-image: url(../../img/hero/love-it.svg);
+    }
+  }
+
+  // .features-list__icon
+
+  &__icon {}
+
+  // .features-list__text
+
+  &__text {
+    max-width: 160px;
+    display: inline-block
+  }
+}
