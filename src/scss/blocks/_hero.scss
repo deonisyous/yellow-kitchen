@@ -1,12 +1,24 @@
 .hero {
-
   // .hero__row
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  height: calc(100vh - 73px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0px 0 48px 0;
 
-  &__row {}
+  &__row {
+    display: flex;
+  }
 
   // .hero__content
 
-  &__content {}
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
 
   // .hero__title
 
@@ -39,15 +51,36 @@
 
   // .hero__image-block
 
-  &__image-block {}
+  &__image-block {
+    padding-top: 25px;
+    margin: 0;
+    flex-shrink: 0;
+  }
 
   // .hero__img
 
-  &__img {}
+  &__img {
+    max-height: 65vh;
+    /* Страховка: салат никогда не вылезет за пределы экрана */
+  }
 
   // .hero__caption
 
-  &__caption {}
+  &__caption {
+    text-align: right;
+    position: relative;
+
+    &::before {
+      content: "";
+      background-image: url(../../img/hero/curve-arrow.svg);
+      width: 100px;
+      height: 65px;
+      background-repeat: no-repeat;
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+    }
+  }
 }
 
 .container {}
