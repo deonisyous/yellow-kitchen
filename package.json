@@ -77,5 +77,8 @@
 		"wawoff2": "^2.0.1",
 		"webpack": "^5.106.2",
 		"webpack-stream": "^7.0.0"
+	},
+	"dependencies": {
+		"@splidejs/splide": "^4.1.4"
 	}
 }

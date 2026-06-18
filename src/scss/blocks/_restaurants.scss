@@ -2,26 +2,40 @@
 
 .restaurants-section {}
 
-.section-header {}
+.restaurant__section-header {
+  display: flex;
+  justify-content: space-between;
+}
 
 .section-title {}
 
 .show-all-btn {}
 
-.carousel-container {}
+.splide {
 
-.nav-btn {}
+  // .splide__track
 
-.prev {}
+  &__track {}
 
-.cards-wrapper {}
+  // .splide__list
+
+  &__list {}
+
+  // .splide__slide
+
+  &__slide {}
+}
 
 .card {}
 
-.card-image {}
+.card-image {
+  width: 100%;
+}
 
-.card-logo-container {}
+.card-logo-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+}
 
 .card-logo {}
-
-.next {}
