@@ -105,7 +105,7 @@ gulp.task('images:dev', async function () {
 
 	const stream = gulp
 		.src(['./src/img/**/*', '!./src/img/svgicons/**/*'])
-		.pipe(changed('./build/img/'))
+		// ФИКС: Убрали плагин changed, чтобы картинки полностью перезаписывались без багов кэша
 		.pipe(gulp.dest('./build/img/'));
 
 	await finished(stream);
