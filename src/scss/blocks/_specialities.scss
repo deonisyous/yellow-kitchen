@@ -1,0 +1,48 @@
+.specialities-section {
+  margin-bottom: 72px;
+}
+
+.specialities {
+  // .specialities__card
+
+  &__card {
+    display: flex;
+    width: 136px;
+    height: 136px;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 2px 16px 0 rgb(60 62 74 / 0.08);
+    border-radius: 6px;
+  }
+
+  // .specialities__card-icon
+
+  &__card-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  // .specialities__card-name
+
+  &__card-name {
+    font-family: var(--font-family);
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    color: var(--text-dark);
+  }
+}
+
+#specialities-splide .splide__arrow--prev {
+  left: -15px;
+  bottom: 35%;
+  transform: rotateY(180deg);
+}
+
+#specialities-splide .splide__arrow--next {
+  right: -15px;
+  bottom: 35%;
+}

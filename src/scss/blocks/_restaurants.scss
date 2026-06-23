@@ -1,10 +1,8 @@
-.container {}
-
 .restaurants-section {
   margin-bottom: 72px;
 }
 
-.restaurant__section-header {
+.header-content-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 48px;
@@ -31,23 +29,17 @@
 }
 
 .splide {
-
   // .splide__track
 
-  &__track {}
-
-  // .splide__list
-
-  &__list {}
-
-  // .splide__slide
-
-  &__slide {}
+  &__track {
+    padding: 10px !important;
+    margin: -10px !important;
+  }
 }
 
 .card {
   border-radius: 4px;
-  box-shadow: 0 2px 16px 0 rgba(60, 62, 74, 0.08);
+  box-shadow: 0 2px 16px 0 rgb(60 62 74 / 0.08);
 }
 
 .card-image {
@@ -61,8 +53,6 @@
   align-items: center;
 }
 
-.card-logo {}
-
 .splide__arrow {
   position: absolute;
   z-index: 999;
@@ -70,6 +60,7 @@
   height: 48px;
   background-color: white;
   border-radius: 50%;
+  box-shadow: 0 8px 40px 0 rgb(0 0 0 / 0.08);
 
   svg {
     fill: var(--gray-second-text);
@@ -80,13 +71,13 @@
   }
 }
 
-.splide__arrow--prev {
+#restaurants-splide .splide__arrow--prev {
   left: 15px;
   bottom: 50%;
   transform: rotateY(180deg);
 }
 
-.splide__arrow--next {
+#restaurants-splide .splide__arrow--next {
   right: 15px;
   bottom: 50%;
 }
