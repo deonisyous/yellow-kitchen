@@ -1,13 +1,48 @@
+@use '../base/mixins' as *;
+
 .footer {
 	background: var(--gray-dark);
 	padding: 48px 0;
 
-	// .footer__top
+	@include tablet {
+		padding: 40px 0;
+	}
+
+	@include mobile {
+		padding: 32px 0;
+	}
 
 	&__top {
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 48px;
+
+		@include tablet {
+			flex-wrap: wrap;
+			gap: 48px;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			gap: 40px;
+			margin-bottom: 32px;
+		}
+	}
+
+	&__brand {
+		@include tablet {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__nav-col {
+		@include tablet {
+			flex: 1 1 calc(33.333% - 48px);
+		}
+
+		@include mobile {
+			flex: 1 1 100%;
+		}
 	}
 
 	&__divider {
@@ -15,16 +50,21 @@
 		width: 296px;
 		height: 1px;
 		margin: 48px 0;
-	}
 
-	// .footer__apps
+		@include tablet {
+			margin: 32px 0;
+		}
+
+		@include mobile {
+			width: 100%;
+			margin: 24px 0;
+		}
+	}
 
 	&__apps {
 		display: flex;
 		gap: 9px;
 	}
-
-	// .footer__title
 
 	&__title {
 		font-family: var(--second-family);
@@ -33,17 +73,18 @@
 		line-height: 1.33;
 		color: #fff;
 		margin-bottom: 24px;
-	}
 
-	// .footer__list
+		@include mobile {
+			font-size: 20px;
+			margin-bottom: 16px;
+		}
+	}
 
 	&__list {
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
 	}
-
-	// .footer__link
 
 	&__link {
 		font-family: var(--font-family);
@@ -53,8 +94,6 @@
 		color: var(--gray-light);
 	}
 
-	// .footer__lang-btn
-
 	&__lang-btn {
 		font-family: var(--font-family);
 		font-weight: 700;
@@ -62,6 +101,10 @@
 		letter-spacing: 0.03em;
 		color: var(--gray-light);
 		position: relative;
+		background: transparent;
+		border: none;
+		padding: 0;
+		cursor: pointer;
 
 		&::before {
 			content: "";
@@ -74,8 +117,6 @@
 		}
 	}
 
-	// .footer__text
-
 	&__text {
 		font-family: var(--font-family);
 		font-weight: 300;
@@ -84,28 +125,44 @@
 		color: #fff;
 	}
 
-	// .footer__bottom
-
 	&__bottom {
 		display: flex;
 		justify-content: space-between;
-	}
+		align-items: center;
 
-	// .footer__socials
+		@include tablet {
+			flex-wrap: wrap;
+			gap: 32px;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 24px;
+		}
+	}
 
 	&__socials {
 		display: flex;
 		gap: 24px;
 	}
 
-	// .footer__legal
-
 	&__legal {
 		display: flex;
 		gap: 60px;
-	}
+		align-items: center;
 
-	// .footer__legal-link
+		@include tablet {
+			gap: 32px;
+			flex-wrap: wrap;
+		}
+
+		@include mobile {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 16px;
+		}
+	}
 
 	&__legal-link {
 		font-family: var(--font-family);
@@ -115,12 +172,14 @@
 		color: #fff;
 	}
 
-	// .footer__copyright
-
 	&__copyright {
 		font-family: var(--font-family);
 		font-size: 12px;
 		line-height: 1.33;
+		color: #fff;
+	}
+
+	&__logo {
 		color: #fff;
 	}
 }
@@ -132,8 +191,6 @@
 	color: var(--text-color);
 	z-index: 1;
 	position: relative;
-
-	/* <-- ДОБАВИТЬ ЭТО СВОЙСТВО */
 
 	span {
 		position: relative;
@@ -147,14 +204,6 @@
 			z-index: -1;
 			bottom: 0;
 			left: 0;
-
-			/* Лучше явно указать left: 0 */
 		}
-	}
-}
-
-.footer {
-	&__logo {
-		color: #fff;
 	}
 }

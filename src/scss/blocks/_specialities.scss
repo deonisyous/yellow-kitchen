@@ -1,10 +1,18 @@
+@use '../base/mixins' as *;
+
 .specialities-section {
   margin-bottom: 72px;
+
+  @include tablet {
+    margin-bottom: 56px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .specialities {
-  // .specialities__card
-
   &__card {
     display: flex;
     width: 136px;
@@ -15,17 +23,33 @@
     background-color: #fff;
     box-shadow: 0 2px 16px 0 rgb(60 62 74 / 0.08);
     border-radius: 6px;
-  }
+    margin: 0 auto;
 
-  // .specialities__card-icon
+    @include tablet {
+      width: 120px;
+      height: 120px;
+    }
+
+    @include mobile {
+      width: 104px;
+      height: 104px;
+    }
+  }
 
   &__card-icon {
     display: flex;
     justify-content: center;
     margin-bottom: 16px;
-  }
 
-  // .specialities__card-name
+    @include mobile {
+      margin-bottom: 12px;
+
+      img {
+        width: 36px;
+        height: auto;
+      }
+    }
+  }
 
   &__card-name {
     font-family: var(--font-family);
@@ -33,6 +57,10 @@
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: var(--text-dark);
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 }
 
@@ -40,9 +68,17 @@
   left: -15px;
   bottom: 35%;
   transform: rotateY(180deg);
+
+  @include mobile {
+    left: 5px;
+  }
 }
 
 #specialities-splide .splide__arrow--next {
   right: -15px;
   bottom: 35%;
+
+  @include mobile {
+    right: 5px;
+  }
 }

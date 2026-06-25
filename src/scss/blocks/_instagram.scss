@@ -1,25 +1,58 @@
+@use '../base/mixins' as *;
+
 .instagram-section {
   margin-bottom: 72px;
+
+  @include tablet {
+    margin-bottom: 56px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .instagram {
-  // .instagram__title-light
+  &__header {
+    margin-bottom: 48px;
+
+    @include tablet {
+      margin-bottom: 32px;
+    }
+
+    @include mobile {
+      margin-bottom: 24px;
+    }
+  }
 
   &__title-light {
     color: var(--gray-second-text);
   }
 
-  // .instagram__grid
-
   &__grid {
     display: flex;
     gap: 24px;
     justify-content: center;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
   }
 
-  // .instagram__image
+  &__item {
+    @include tablet {
+      width: calc(50% - 12px);
+    }
+
+    @include small {
+      width: 100%;
+    }
+  }
 
   &__image {
     border-radius: 6px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
 }

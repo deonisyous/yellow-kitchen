@@ -1,5 +1,6 @@
+@use '../base/mixins' as *;
+
 .hero {
-  // .hero__row
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
@@ -7,21 +8,39 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0px 0 48px 0;
+  padding: 0 0 48px;
 
+  /* На мобильных контент встанет друг под друга, поэтому жесткую высоту убираем */
+  @include mobile {
+    height: auto;
+    min-height: calc(100vh - 73px);
+    gap: 48px;
+
+    /* Добавим отступ между верхом и блоком преимуществ */
+  }
+
+  // .hero__row
   &__row {
     display: flex;
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   // .hero__content
-
   &__content {
     display: flex;
     flex-direction: column;
+
+    @include mobile {
+      align-items: center;
+    }
   }
 
   // .hero__title
-
   &__title {
     padding-top: 120px;
     max-width: 534px;
@@ -32,64 +51,120 @@
     line-height: 1.1;
     letter-spacing: 0.05em;
     margin-bottom: 88px;
+
+    @include laptop {
+      padding-top: 80px;
+      margin-bottom: 60px;
+      font-size: 52px;
+    }
+
+    @include tablet {
+      padding-top: 60px;
+      font-size: 46px;
+      margin-bottom: 48px;
+    }
+
+    @include mobile {
+      padding-top: 32px;
+      font-size: 40px;
+      margin-bottom: 32px;
+    }
+
+    @include small {
+      font-size: 32px;
+    }
   }
 
-  // .hero__cta
-
-  &__cta {}
-
   // .hero__features
-
   &__features {
     display: flex;
     width: 872px;
-    box-shadow: 0 8px 40px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 40px 0 rgb(0 0 0 / 0.08);
     padding: 24px 24px 24px 92px;
     justify-content: space-between;
 
+    @include laptop {
+      width: 100%;
+      max-width: 872px;
+      padding-left: 48px;
+    }
+
+    @include tablet {
+      padding: 24px;
+      gap: 16px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+
+      /* Можно изменить на center, если захочешь */
+      gap: 24px;
+    }
   }
 
   // .hero__image-block
-
   &__image-block {
     padding-top: 25px;
     margin: 0;
     flex-shrink: 0;
+
+    @include mobile {
+      padding-top: 32px;
+    }
   }
 
   // .hero__img
-
   &__img {
     max-height: 65vh;
-    /* Страховка: салат никогда не вылезет за пределы экрана */
+    max-width: 100%;
+    object-fit: contain;
+
+    @include tablet {
+      max-height: 50vh;
+    }
+
+    @include mobile {
+      max-height: 40vh;
+    }
   }
 
   // .hero__caption
-
   &__caption {
     text-align: right;
     position: relative;
 
+    @include mobile {
+      text-align: center;
+      margin-top: 16px;
+    }
+
     &::before {
       content: "";
-      background-image: url(../../img/hero/curve-arrow.svg);
+      background-image: url("../../img/hero/curve-arrow.svg");
       width: 100px;
       height: 65px;
       background-repeat: no-repeat;
       position: absolute;
       bottom: 100%;
       right: 0;
+
+      @include tablet {
+        display: none;
+
+        /* Скрываем стрелку, так как на планшетах/мобилках она обычно мешает */
+      }
     }
   }
 }
 
-.container {}
-
-.title-1 {}
-
 .cta-group {
   display: flex;
   column-gap: 24px;
+
+  @include small {
+    column-gap: 16px;
+  }
 }
 
 .cta-card {
@@ -101,16 +176,13 @@
   justify-content: center;
   border-radius: 4px;
   color: var(--gray-dark);
-  // .cta-card__badge
 
-  &__badge {}
-
-  // .cta-card__badge--delivery
-
-  &__badge--delivery {}
+  @include small {
+    width: 105px;
+    height: 64px;
+  }
 
   // .cta-card__text
-
   &__text {
     span {
       display: block;
@@ -119,7 +191,6 @@
   }
 
   // .cta-card__title
-
   &__title {
     font-family: var(--font-family);
     font-weight: 700;
@@ -128,7 +199,6 @@
   }
 
   // .cta-card__subtitle
-
   &__subtitle {
     font-weight: 400;
     font-size: 12px;
@@ -136,23 +206,11 @@
     font-family: var(--font-family);
     letter-spacing: 0.03em;
   }
-
-  // .cta-card__badge--takeout
-
-  &__badge--takeout {}
 }
 
-.icon {}
-
-.icon--delivery {}
-
-.icon--takeout {}
-
-.container-layout {}
 
 .features-list {
   // .features-list__item
-
   &__item {
     position: relative;
     padding-left: 64px;
@@ -166,30 +224,33 @@
       height: 48px;
       position: absolute;
       left: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
 
-
     &:nth-child(1)::before {
-      background-image: url(../../img/hero/time-eat.svg);
+      background-image: url("../../img/hero/time-eat.svg");
     }
 
     &:nth-child(2)::before {
-      background-image: url(../../img/hero/delivery.svg);
+      background-image: url("../../img/hero/delivery.svg");
     }
 
     &:nth-child(3)::before {
-      background-image: url(../../img/hero/love-it.svg);
+      background-image: url("../../img/hero/love-it.svg");
     }
   }
 
-  // .features-list__icon
-
-  &__icon {}
-
   // .features-list__text
-
   &__text {
     max-width: 160px;
-    display: inline-block
+    display: inline-block;
+
+    @include mobile {
+      max-width: none;
+
+      /* Убираем жесткое ограничение ширины текста для мобилок */
+    }
   }
 }
