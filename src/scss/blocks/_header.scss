@@ -40,7 +40,6 @@
 	font-family: var(--second-family);
 	font-size: 24px;
 	font-weight: 700;
-	color: var(--text-color);
 	z-index: 1;
 
 	span {
@@ -49,7 +48,7 @@
 		&::before {
 			content: '';
 			position: absolute;
-			background-color: #ffe145;
+			background-color: var(--brand-yellow-dark);
 			width: 80px;
 			height: 13px;
 			z-index: -1;

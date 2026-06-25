@@ -1,11 +1,160 @@
 .footer {
-	padding: 32px 0;
-	border-top: 1px solid var(--border-color);
-	background-color: var(--page-bg);
-	color: var(--text-color);
+	background: var(--gray-dark);
+	padding: 48px 0;
+
+	// .footer__top
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 48px;
+	}
+
+	&__divider {
+		background: var(--gray-light);
+		width: 296px;
+		height: 1px;
+		margin: 48px 0;
+	}
+
+	// .footer__apps
+
+	&__apps {
+		display: flex;
+		gap: 9px;
+	}
+
+	// .footer__title
+
+	&__title {
+		font-family: var(--second-family);
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 1.33;
+		color: #fff;
+		margin-bottom: 24px;
+	}
+
+	// .footer__list
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	// .footer__link
+
+	&__link {
+		font-family: var(--font-family);
+		font-weight: 700;
+		line-height: 1.25;
+		letter-spacing: 0.03em;
+		color: var(--gray-light);
+	}
+
+	// .footer__lang-btn
+
+	&__lang-btn {
+		font-family: var(--font-family);
+		font-weight: 700;
+		line-height: 1.25;
+		letter-spacing: 0.03em;
+		color: var(--gray-light);
+		position: relative;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-image: url("../../img/footer/down.svg");
+			width: 24px;
+			height: 24px;
+			right: -30px;
+			top: -5px;
+		}
+	}
+
+	// .footer__text
+
+	&__text {
+		font-family: var(--font-family);
+		font-weight: 300;
+		line-height: 1.5;
+		letter-spacing: 0.03em;
+		color: #fff;
+	}
+
+	// .footer__bottom
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .footer__socials
+
+	&__socials {
+		display: flex;
+		gap: 24px;
+	}
+
+	// .footer__legal
+
+	&__legal {
+		display: flex;
+		gap: 60px;
+	}
+
+	// .footer__legal-link
+
+	&__legal-link {
+		font-family: var(--font-family);
+		font-weight: 800;
+		font-size: 12px;
+		line-height: 1.33;
+		color: #fff;
+	}
+
+	// .footer__copyright
+
+	&__copyright {
+		font-family: var(--font-family);
+		font-size: 12px;
+		line-height: 1.33;
+		color: #fff;
+	}
 }
 
-.footer__copyright {
-	font-size: 14px;
-	opacity: 0.7;
+.logo {
+	font-family: var(--second-family);
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--text-color);
+	z-index: 1;
+	position: relative;
+
+	/* <-- ДОБАВИТЬ ЭТО СВОЙСТВО */
+
+	span {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background-color: #ffe145;
+			width: 80px;
+			height: 13px;
+			z-index: -1;
+			bottom: 0;
+			left: 0;
+
+			/* Лучше явно указать left: 0 */
+		}
+	}
+}
+
+.footer {
+	&__logo {
+		color: #fff;
+	}
 }

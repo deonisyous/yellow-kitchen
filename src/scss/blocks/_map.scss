@@ -1,0 +1,19 @@
+// ========================
+// Map Section
+// ========================
+
+.map-section {
+  margin-bottom: 72px;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

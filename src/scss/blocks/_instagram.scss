@@ -1,0 +1,25 @@
+.instagram-section {
+  margin-bottom: 72px;
+}
+
+.instagram {
+  // .instagram__title-light
+
+  &__title-light {
+    color: var(--gray-second-text);
+  }
+
+  // .instagram__grid
+
+  &__grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+  }
+
+  // .instagram__image
+
+  &__image {
+    border-radius: 6px;
+  }
+}
